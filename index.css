@@ -1,6 +1,6 @@
 @import url('https://font.googleapis.com/css2?family~Rubik:wght@300;400;500;600;700;800;900&display~swap');
 
-:root{
+:root {
     --clr-main: #000000;
     --clr-white: #ececec;
     --clr-gray: #e2e2e2;
@@ -10,32 +10,30 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box ;
+    box-sizing: border-box;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-
 }
 
-h1, h2, h3, p, textarea, ul{
+h1, h2, h3, p, textarea, ul {
     margin: 0;
     padding: 0;
 }
 
-ul{
+ul {
     list-style: none;
 }
 
-
-a{
+a {
     text-decoration: none;
 }
 
-.wrapper{
+.wrapper {
     display: grid;
     grid-template-columns: 1fr 4fr;
     background-color: var(--clr-main);
 }
 
-aside{
+aside {
     padding: 2rem;
     padding-right: 0%;
     color: var(--clr-white);
@@ -45,23 +43,20 @@ aside{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-   
-    
 }
 
-.logo{
+.logo {
     font-weight: 400;
     font-size: 1.3rem;
-
 }
 
-.menu{
+.menu {
     display: flex;
     flex-direction: column;
     gap: .5rem;
 }
 
-.btn-nav{
+.btn-nav {
     background-color: transparent;
     border: 0;
     color: var(--clr-white);
@@ -71,24 +66,22 @@ aside{
     font-weight: 600;
     padding: 1rem;
     width: 100%;
-
 }
-.btn-nav.active{
+
+.btn-nav.active {
     background-color: var(--clr-white);
     color: var(--clr-main);
     width: 100%;
     border-top-left-radius: 1rem;
     border-bottom-left-radius: 1rem;
-
 }
 
-.texto-footer{
+.texto-footer {
     color: gray;
-    font-size: 0,75rem;
-
+    font-size: 0.75rem;
 }
 
-main{
+main {
     background-color: var(--clr-white);
     margin: 1rem;
     margin-left: 0;
@@ -96,24 +89,24 @@ main{
     padding: 3rem;
 }
 
-.titulo-principal{
+.titulo-principal {
     color: var(--clr-main);
     margin-bottom: 2rem;
 }
 
-.contenedor-productos{
+.contenedor-productos {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     gap: 1rem;
-
 }
 
-.producto-img{
+.producto-img {
     max-width: 100%;
     border-radius: 1rem;
 }
-.producto-detalle{
-    background-color:var(--clr-main);
+
+.producto-detalle {
+    background-color: var(--clr-main);
     color: var(--clr-white);
     border-radius: 1rem;
     padding: .5rem;
@@ -121,38 +114,73 @@ main{
     position: relative;
     display: flex;
     flex-direction: column;
-    gap: .25remS;
+    gap: .25rem;
 }
 
-.producto-titulo{
+.producto-titulo {
     font-size: 1rem;
-
 }
 
 /*** media queries ***/
+@media screen and (max-width: 1024px) {
+    .wrapper {
+        grid-template-columns: 1fr 3fr;
+    }
+    .contenedor-productos {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .wrapper {
+        grid-template-columns: 1fr;
+    }
+    aside {
+        height: auto;
+        position: relative;
+    }
+    .contenedor-productos {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    main {
+        padding: 1.5rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    aside {
+        padding: 1rem;
+    }
+    .btn-nav {
+        font-size: 0.875rem;
+        padding: 0.75rem;
+    }
+    main {
+        margin: 0.5rem;
+        padding: 1rem;
+    }
+    .contenedor-productos {
+        grid-template-columns: 1fr;
+    }
+}
+
 @media screen and (max-width: 300px) {
-    
     .wrapper {
         grid-template-columns: 1fr;
         padding: 0;
     }
-    .asaid {
+    aside {
         position: fixed;
         z-index: 9;
         background-color: var(--clr-main);
         left: 0;
         box-shadow: 0 0 0 100vmax rgba(0, 0, 0, .75);
-
     }
     main {
         margin: 1rem;
         padding: 2rem;
-        
-
     }
-    .contenedor-productos{
-        grid-template-columns: 1fr, 1fr;
+    .contenedor-productos {
+        grid-template-columns: 1fr;
     }
-    
-
 }
