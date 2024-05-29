@@ -103,7 +103,10 @@ const productoArray=[
         },
         precio: "$8000"
     },
+
 ]
+
+
 
 const contenedorProductos= document.querySelector(".contenedor-productos");
 const botonesCategorias = document.querySelectorAll(".btn-nav");
